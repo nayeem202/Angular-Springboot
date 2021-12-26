@@ -1,4 +1,106 @@
 
 <div class="content-wrapper">
-    Advertise Component 
+    <div class="container-fluid px-1 py-5 mx-auto">
+        <div class="row d-flex justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+                <h3>Publish your Advertise</h3>
+                <p class="blue-text"></p>
+                <div class="card">
+                    <h5 class="text-center mb-4"></h5>
+                    <form class="form-card" (ngSubmit)="save()" onsubmit="event.preventDefault()">
+                        
+                        
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3"> User ID <span class="text-danger"> *</span></label> <input type="number" [(ngModel)]= "advertise.id"  id="id" name="id" placeholder="Enter your first name"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Advertising ID<span class="text-danger"> *</span></label> <input type="number"  [(ngModel)]= "advertise.advertisingId" id="advertisingId" name="advertisingId" placeholder="Enter your last name" > </div>
+                        </div>
+
+
+                        <div class="row justify-content-between text-left">
+
+
+
+                            <div class="form-group col-sm-6 flex-column d-flex">
+
+                                <label class="form-control-label px-3"> Location <span class="text-danger"> *</span></label> 
+                                <select id="location" name="location" [(ngModel)]= "advertise.location">
+                                    <option value="Gulshan">Gulshan</option>
+                                    <option value="Banani">Banani</option>
+                                    <option value="Dhanmondi">Dhanmondi</option>
+                                    <option value="Mirpur">Mirpur</option>
+                                  </select>
+
+                                </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">  Type <span class="text-danger"> *</span></label>
+                                <select id="type" name="type" [(ngModel)]= "advertise.type">
+                                    <option value="Apartment">Apartment</option>
+                                    <option value="Duplex">Duplex</option>
+                                    <option value="Single Family Detached House">Single Family Detached House</option>
+                                    <option value="Villa">Villa</option>
+                                    <option value="Tiny home">Tiny home</option>
+                                  </select>
+                                </div>
+                        </div>
+
+
+
+
+                        <div class="row justify-content-between text-left">
+
+
+                            
+
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3"> Status <span class="text-danger"> *</span></label> 
+                                <select id="status" name="status" [(ngModel)]= "advertise.status">
+                                    <option value="Gulshan">Bachelor</option>
+                                    <option value="Family(>=3 Members)">Family(>=3 Members)</option>
+                                    <option value="Family(3+ Members)">Family(3+ Members)</option>
+                                    
+                                  </select>
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3"> Bedrooms <span class="text-danger"> *</span></label> <input type="number" id="bedrooms" [(ngModel)]= "advertise.bedrooms" name="bedrooms" placeholder="" onblur="validate(5)"> </div>
+                        </div>
+
+                        <div class="row justify-content-between text-left">
+                           
+                        </div>
+
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3"> Bathrooms <span class="text-danger"> *</span></label> <input type="number" id="bathrooms"   [(ngModel)]= "advertise.bathrooms"  name="bathrooms" placeholder="" onblur="validate(5)"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3"> Rent Price <span class="text-danger"> *</span></label> <input type="number" id="price"  [(ngModel)]= "advertise.price"  name="price" placeholder="" onblur="validate(5)"> </div>
+                        </div>
+
+                       
+
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3"> Sqft <span class="text-danger"> *</span></label> <input type="number" id="sqft"  [(ngModel)]= "advertise.sqft"  name="sqft" placeholder="" onblur="validate(5)"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3"> additional Information <span class="text-danger"> *</span></label> <input type="number" id="price"  [(ngModel)]= "advertise.additionalinformation"  name="price" placeholder="" onblur="validate(5)"> </div>
+                        </div>
+
+                        <div class="row justify-content-between text-left">
+
+                        </div>
+
+                        <div class="row justify-content-between text-left">
+                           
+                        </div>
+
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3"> images <span class="text-danger"> *</span></label> 
+                                
+                                <input type="file" id="images" name="images"  [(ngModel)]= "advertise.images"><br><br>
+                                </div>
+                               
+                        </div>
+                        <div class="row justify-content-end">
+                            <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">Publish</button> </div>
+                        </div>
+
+
+                      
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

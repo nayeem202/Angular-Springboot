@@ -26,9 +26,11 @@ export class AdvertiseComponent implements OnInit {
   save(){
     
     this.toastr.success("Successfully Published")
+    
+    
     this.submitted = true;
     const headers = {'content-Type' : 'application/json' }; 
-    this.http.post("http://localhost:9092/saveadvertising",JSON.stringify(this.advertise),{headers:headers}).subscribe(data=>{
+    this.http.post("http://localhost:9092//saveUser",JSON.stringify(this.advertise),{headers:headers}).subscribe(data=>{
       console.log(data);
     })
 

@@ -14,8 +14,9 @@ export class Advertise {
     sqft: number = 0;
     additionalinformation: string = "";
     images: string = "";
+    user : any;
 
-
+    
 
     constructor() {
 

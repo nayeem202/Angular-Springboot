@@ -32,12 +32,13 @@ export class LoginComponent implements OnInit {
     return this.formGroup.controls;
   }
 
+    st : any ;
   onSubmit(){
     
     this.submitted = true;
    this.loginService.login(this.formGroup.value)
    .subscribe(res => {
-    this.storageService.saveLoginInfo(res.data);
+    this.st = this.storageService.saveLoginInfo(res.data);
     this.route.navigate(['/admin']);
     this.toastr.success("Successfully Login")
    }, err => {

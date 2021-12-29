@@ -81,7 +81,7 @@
                             <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3"> Sqft <span class="text-danger"> *</span></label> <input type="number" id="sqft"  [(ngModel)]= "advertise.sqft"  name="sqft" placeholder="" onblur="validate(5)"> </div>
                             <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3"> images <span class="text-danger"> *</span></label> 
                                 
-                                <input type="file" id="images" name="images"  [(ngModel)]= "advertise.images"><br><br>
+                                <input type="file" id="file" name="file"  (change)="fileChange($event.target)"><br><br>
                                 </div>
                                
                         </div>

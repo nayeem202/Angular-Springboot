@@ -14,10 +14,13 @@ export class AdvertiseComponent implements OnInit {
   submitted = false;
   advertise: Advertise = new Advertise();
   fileToUpload: any;
+  advertising : any =[];
+
   constructor(private route: Router, private http: HttpClient, private toastr: ToastrService) { }
 
 
   ngOnInit(): void {
+    this.getAll()
 
   }
 
@@ -68,10 +71,28 @@ export class AdvertiseComponent implements OnInit {
         console.log(data);
       })
 
-    console.log(this.advertise.location);
+    
 
   }
 
+
+  getAll(){
+    const header ={
+      "Content-Type": "application/json"
+    };
+
+    this.http.get('http://localhost:9092/getAddvertising', {headers: header}).subscribe(res=>{;
+    console.log(res);   
+    this.advertising = res; 
+    console.log(this.advertising.location);
+    console.log("load passed");
+      
+  },  err => {
+    console.log("load failed");
+    
+   
+  })
+  }
 
 
 

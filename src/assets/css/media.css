@@ -175,10 +175,14 @@
 	}
 	
 	/* AA Listing List */
-	.property-main-box .col-md-4 > a img {
-		min-height: 184px;
-		max-height: 184px;
+	
+	.other-properties .property-main-box,
+	.content-area .property-main-box {
+		width: 420px;
+		display: block;
+		margin: 0 auto 30px;
 	}
+
 	
 	/* Property Detail 2 */
 	.amenities-list .col-md-3 {
@@ -501,7 +505,7 @@
 	}
 	
 	.property-images-box img {
-		width: 100%;
+		width: 60%;
 	}
 	
 	.property-details {

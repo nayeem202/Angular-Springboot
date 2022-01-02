@@ -21,6 +21,7 @@ export class AdvertiseComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAll()
+ 
 
   }
 
@@ -70,9 +71,6 @@ export class AdvertiseComponent implements OnInit {
       .subscribe(data => {
         console.log(data);
       })
-
-    
-
   }
 
 
@@ -93,6 +91,8 @@ export class AdvertiseComponent implements OnInit {
    
   })
   }
+
+
 
 
 

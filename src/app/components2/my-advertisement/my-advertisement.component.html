@@ -1,0 +1,20 @@
+<div class="content-wrapper">
+  <div class="text-center mt-2">
+    <h4>My Advertisement</h4>
+  </div>
+  <div class="row">
+    <div *ngFor="let item of myAdvertising; index as i" class="card ml-3 mt-4" style="width: 23rem;">
+      <img src={{item.imagesUri}} class="card-img-top" width="320px" height="240" alt="userHousesImage">
+      <div class="card-body">
+        <h5 class="card-title">Post {{i+1}}</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-primary"><i class="fas fa-edit"></i> Modify</a>
+        <a (click)="deleteStudent(myAdvertising)" class="btn btn-danger ml-3"><i class="fas fa-trash-alt"></i> Delete</a>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>

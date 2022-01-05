@@ -22,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { AdvertiseComponent } from './components2/advertise/advertise.component';
+import { MyAdvertisementComponent } from './components2/my-advertisement/my-advertisement.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { AdvertiseComponent } from './components2/advertise/advertise.component'
     AdminHomeComponent,
     DashboardComponent,
     AdvertiseComponent,
+    MyAdvertisementComponent,
     
   ],
   imports: [

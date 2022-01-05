@@ -7,6 +7,7 @@ import { AdminLayoutComponent } from './components2/admin-layout/admin-layout.co
 import { AdvertiseComponent } from './components2/advertise/advertise.component';
 import { AuthGuard } from './components2/auth.guard';
 import { LoginComponent } from './components2/login/login.component';
+import { MyAdvertisementComponent } from './components2/my-advertisement/my-advertisement.component';
 import { SignupComponent } from './components2/signup/signup.component';
 
 
@@ -23,7 +24,7 @@ const routes: Routes = [
 
   {path: 'admin', component: AdminLayoutComponent, canActivateChild: [AuthGuard], children: [
     {path: '', component: AdminHomeComponent},
-    {path: 'advertise', component: AdvertiseComponent}
+    {path: 'advertise', component: AdvertiseComponent},{path: 'myadvertisement', component: MyAdvertisementComponent}
     
   ]},
 

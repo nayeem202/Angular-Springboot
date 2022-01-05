@@ -12,17 +12,24 @@ import { User } from '../signup/SignupModel';
   styleUrls: ['./my-advertisement.component.css']
 })
 export class MyAdvertisementComponent implements OnInit {
-  //advertise: Advertise = new Advertise
-  
+  advertise: Advertise = new Advertise
+    
+
   myAdvertising : any =[];
+  
+  //advertise: Advertise = this.myAdvertising
+
   constructor(private route: Router, private http: HttpClient, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.getAll();
+   
   }
 
-  advertise: Advertise = this.myAdvertising
+  
   userM: User = JSON.parse(localStorage.getItem("current_user") as string);
+  
+  //Delete memberWise Advertising List
   
   getAll(){
     const header ={
@@ -34,46 +41,23 @@ export class MyAdvertisementComponent implements OnInit {
     console.log("load passed"); 
   },  err => {
     console.log("load failed");
-    
-   
   })
   }
 
+  //Delete memberWise Advertising List
 
-
-/*
-  deleteStudent(advertise: any){
-    console.log("delete button");
-    const headers = { 'content-Type': 'application/json' };
-    this.http.delete("http://localhost:9092/deleteAdvertising?id"+advertise.advertisingId,{ headers: headers })
-      .subscribe(data => {
-        this.getAll();
-        console.log(data);
-        console.log("Deleted Successfully");
-        
-      })
-  }
-*/
-
-
-
-deleteStudent(advertise: any){
- 
- id : advertise.forEach((id: any) => console.log(id.advertisingId));
-  
+  deleteAdvertise(advertise:any){
   console.log("delete button");
+  this.myAdvertising.forEach((element: any) => 
+  console.log(element.advertisingId));
   const headers = { 'content-Type': 'application/json' };
-  this.http.delete("http://localhost:9092/deleteAdvertising?id"+this.advertise,{ headers: headers })
+  this.http.delete("http://localhost:9092/deleteAdvertising/"+advertise.advertisingId,{ headers: headers })
     .subscribe(data => {
       this.getAll();
       console.log(data);
-      console.log("Deleted Successfully");
-      
+      console.log("Deleted Successfully");    
     })
 }
-
-
-
 
 
 }

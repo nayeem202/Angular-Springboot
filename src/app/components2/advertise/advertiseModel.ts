@@ -1,10 +1,8 @@
 export class Advertise {
-
+  
 
     id: number= 0;
     advertisingId : number = 0;
-
-
     location: string = "";
     type: string = "";
     status: string = "";
@@ -19,8 +17,6 @@ export class Advertise {
     
 
     constructor() {
-
-
     }
 
 

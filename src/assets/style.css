@@ -449,6 +449,26 @@ textarea {
 	bottom: -44px;
 }
 
+.newPull-right {
+	background-color: #79b445;
+    width: 220px;
+    max-height: 40px;
+    line-height: 36px;
+	line-height: 40px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 0;
+    color: #fff;
+    padding: 0;
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    text-align: center;
+    display: inline;
+}
+  
+
 .header .sb-search
 
 .header.header2 {

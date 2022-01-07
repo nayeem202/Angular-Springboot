@@ -11,7 +11,9 @@
                 <div class="card">
                     <h3 style="color: rgb(12, 30, 46);">Publish your Advertise</h3>
                     <h5 class="text-center mb-4"></h5>
-                    <form class="form-card" (ngSubmit)="save()" onsubmit="event.preventDefault()">
+                    <form class="form-card" (ngSubmit)="isSave? save() : updateAdvertise()"
+                    
+                        onsubmit="event.preventDefault()">
 
 
                         <div class="row justify-content-between text-left">
@@ -116,9 +118,11 @@
 
                         <div class="row justify-content-end">
                             <div class="form-group col-sm-6"> <button type="submit"
-                                    class="btn-block btn-primary">Publish</button> </div>
+                                    class="btn-block btn-primary">{{ isSave?  'Save' :
+                                    'Update'}}</button> </div>
                         </div>
 
+                        
 
 
                     </form>

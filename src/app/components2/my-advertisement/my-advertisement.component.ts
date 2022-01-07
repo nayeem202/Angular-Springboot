@@ -13,23 +13,22 @@ import { User } from '../signup/SignupModel';
 })
 export class MyAdvertisementComponent implements OnInit {
   advertise: Advertise = new Advertise
-    
+  isSave : boolean = true
 
-  myAdvertising : any =[];
+  myAdvertising : any;
   
-  //advertise: Advertise = this.myAdvertising
+
 
   constructor(private route: Router, private http: HttpClient, private toastr: ToastrService) { }
 
   ngOnInit(): void {
-    this.getAll();
-   
+    this.getAll();  
   }
 
   
   userM: User = JSON.parse(localStorage.getItem("current_user") as string);
   
-  //Delete memberWise Advertising List
+  
   
   getAll(){
     const header ={
@@ -48,8 +47,7 @@ export class MyAdvertisementComponent implements OnInit {
 
   deleteAdvertise(advertise:any){
   console.log("delete button");
-  this.myAdvertising.forEach((element: any) => 
-  console.log(element.advertisingId));
+
   const headers = { 'content-Type': 'application/json' };
   this.http.delete("http://localhost:9092/deleteAdvertising/"+advertise.advertisingId,{ headers: headers })
     .subscribe(data => {
@@ -58,6 +56,24 @@ export class MyAdvertisementComponent implements OnInit {
       console.log("Deleted Successfully");    
     })
 }
+
+    editAdvertise(advertise: any) {  
+    this.advertise.advertisingId = advertise.advertisingId;
+    console.log(this.advertise.advertisingId);
+
+    this.advertise.location = advertise.location;
+    this.advertise.type = advertise.type;
+    this.advertise.status = advertise.status;
+    this.advertise.bedrooms = advertise.bedrooms;
+    this.advertise.bathrooms = advertise.bathrooms;
+    this.advertise.price = advertise.price;
+    this.advertise.sqft = advertise.sqft;
+    this.advertise.additionalinformation = advertise.additionalinformation;
+    this.advertise.images = advertise.images;
+    this.advertise.user = advertise.user;
+    this.route.navigate(['/admin/advertise'], { state: {add : advertise, isSave: false}})
+  }
+
 
 
 }

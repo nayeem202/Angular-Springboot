@@ -72,9 +72,11 @@ export class AdvertiseComponent implements OnInit {
 
 
 
-  updateAdvertise() {
+    updateAdvertise() {
 
     const formData: FormData = new FormData();
+
+    formData.append('advertisingId', this.advertise['advertisingId'].toString());
     formData.append('location', this.advertise['location']);
     formData.append('type', this.advertise['type']);
     formData.append('status', this.advertise['status']);
@@ -87,12 +89,15 @@ export class AdvertiseComponent implements OnInit {
     formData.append('file', this.fileToUpload, this.fileToUpload?.name);
     this.submitted = true;
 
-    this.http.post("http://localhost:9092/updateadvertising/" + this.advertise.advertisingId, formData)
+    
+    
+ 
+    this.http.post("http://localhost:9092/updateadvertising", formData)
       .subscribe(res => {
         console.log(res);
-        this.toastr.success("Successfully Published")
+        this.toastr.success("Successfully Updated")
       }, err => {
-        this.toastr.error("Post failed")
+        this.toastr.error("Updated failed")
       })
 
     /*this.isSave = true;

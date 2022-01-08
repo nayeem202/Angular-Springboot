@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { HeaderComponent } from '../layout/header/header.component';
 
 @Component({
   selector: 'app-home',
@@ -12,10 +13,18 @@ export class HomeComponent implements OnInit {
   advertising : any =[];
 
   constructor(private route: Router, private http: HttpClient, private toastr: ToastrService) { }
+   
+  
+
 
   ngOnInit(): void {
     this.getAll();
+    let headerC =  new HeaderComponent(this.route, this.http, this.toastr);
+    this.advertising =   headerC.getCategoriseAdvertise();
   }
+
+
+
 
   getAll(){
     const header ={
@@ -34,6 +43,7 @@ export class HomeComponent implements OnInit {
    
   })
   }
+  
 
 
 }

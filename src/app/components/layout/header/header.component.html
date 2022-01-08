@@ -37,9 +37,7 @@
 		type='text/css'>
 
 
-
-
-
+	
 </head>
 
 <body data-offset="200" data-spy="scroll" data-target=".primary-navigation">
@@ -96,24 +94,24 @@
 							</button>
 
 							<div>
-								<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-									<select name="" id=""  *ngFor="let item of advertising; index as i">
-										<option value="">{{item.type}}</option>
+							
+									<select name="type" id=""  [(ngModel)]="type" (click)= "getCategoriseAdvertise()">
+										<option value="-1"> Choose  your  House  type  </option>
+										<option value="Apartment">Apartment</option>
+										<option value="Duplex">Duplex</option>
 
 									</select>
 
+
 									<!--
-									<button class="dropdown-item" type="button">{{item.type}}</button>
-									<button class="dropdown-item" type="button">{{item.type}}</button>
-									-->
-								</div>
+									<button class="dropdown-item" value="Apartment"  [(ngModel)]="Apartment" type="button">Apartment</button>
+								-->
+								
 							</div>
 
 						</div>
 					</nav>
-
-
-
+			
 
 
 				</div><!-- Menu Block /- -->

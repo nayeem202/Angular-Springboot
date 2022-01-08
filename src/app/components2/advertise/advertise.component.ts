@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { HeaderComponent } from 'src/app/components/layout/header/header.component';
 import { User } from '../signup/SignupModel';
 import { Advertise } from './advertiseModel';
 
@@ -18,7 +19,7 @@ export class AdvertiseComponent implements OnInit {
   fileToUpload: any;
   advertising: any = [];
 
-  constructor(private route: Router, private http: HttpClient, private toastr: ToastrService) { }
+  constructor(private route: Router,  private http: HttpClient, private toastr: ToastrService) { }
 
 
   ngOnInit(): void {
@@ -31,6 +32,7 @@ export class AdvertiseComponent implements OnInit {
 
   }
 
+ 
 
   userM: User = JSON.parse(localStorage.getItem("current_user") as string);
 
@@ -39,6 +41,8 @@ export class AdvertiseComponent implements OnInit {
     debugger;
     this.fileToUpload = files.files[0]
   }
+
+
 
 
   save() {

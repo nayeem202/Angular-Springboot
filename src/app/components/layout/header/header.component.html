@@ -77,29 +77,41 @@
 					<nav class="navbar navbar-default primary-navigation">
 						<div class="navbar-header">
 
-							
-								<div class="search">
-								   <input type="text" class="searchTerm" placeholder="What are you looking for?">
-								   <button type="submit" class="searchButton">
-									 <i class="fa fa-search"></i>
-								  </button>
-								</div>
+
+							<div class="search">
+								<input type="text" class="searchTerm" placeholder="What are you looking for?">
+								<button type="submit" class="searchButton">
+									<i class="fa fa-search"></i>
+								</button>
+							</div>
 
 						</div>
-						
+
 						<a title="Add Property" (click)=" memberLogin()" class="newPull-right">Member Login</a>
 						<div class="dropdown">
-							<button class="btn newPull-right"  type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+							<button class="btn newPull-right" type="button" id="dropdownMenu2" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false">
 								Category <i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
 							</button>
-							<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-							  <button class="dropdown-item" type="button">Action</button>
-							  <button class="dropdown-item" type="button">Another action</button>
-							  <button class="dropdown-item" type="button">Something else here</button>
+
+							<div>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+									<select name="" id=""  *ngFor="let item of advertising; index as i">
+										<option value="">{{item.type}}</option>
+
+									</select>
+
+									<!--
+									<button class="dropdown-item" type="button">{{item.type}}</button>
+									<button class="dropdown-item" type="button">{{item.type}}</button>
+									-->
+								</div>
 							</div>
-						  </div>
+
+						</div>
 					</nav>
-					
+
 
 
 

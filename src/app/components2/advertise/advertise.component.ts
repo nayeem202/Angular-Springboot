@@ -100,19 +100,8 @@ export class AdvertiseComponent implements OnInit {
         this.toastr.error("Updated failed")
       })
 
-    /*this.isSave = true;
-    const headers = { 'content-Type': 'application/json' };
-    this.http.post("http://localhost:9090/employee/update", JSON.stringify(this.employee), { headers: headers })
-      .subscribe(data => {
-        console.log(data);
-      })
-    this.employee = new Employee()
-    this.router.navigateByUrl("/admin/show");
-    this.submitted = true;
-    */
+  
   }
-
-
 
   savebackup() {
     this.toastr.success("Successfully Published")
@@ -126,7 +115,6 @@ export class AdvertiseComponent implements OnInit {
         console.log(data);
       })
   }
-
 
   getAll() {
     const header = {
@@ -146,12 +134,6 @@ export class AdvertiseComponent implements OnInit {
 
     })
   }
-
-
-
-
-
-
 
 
 }

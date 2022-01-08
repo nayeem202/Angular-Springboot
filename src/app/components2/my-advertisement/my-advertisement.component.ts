@@ -14,11 +14,8 @@ import { User } from '../signup/SignupModel';
 export class MyAdvertisementComponent implements OnInit {
   advertise: Advertise = new Advertise
   isSave : boolean = true
-
   myAdvertising : any;
   
-
-
   constructor(private route: Router, private http: HttpClient, private toastr: ToastrService) { }
 
   ngOnInit(): void {
@@ -53,6 +50,7 @@ export class MyAdvertisementComponent implements OnInit {
     .subscribe(data => {
       this.getAll();
       console.log(data);
+      this.toastr.error("Successfully Deleted")
       console.log("Deleted Successfully");    
     })
 }

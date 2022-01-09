@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdvertisingDetailsComponent } from './components/advertising-details/advertising-details.component';
 import { HomeComponent } from './components/home/home.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { AdminHomeComponent } from './components2/admin-home/admin-home.component';
@@ -13,7 +14,7 @@ import { SignupComponent } from './components2/signup/signup.component';
 
 const routes: Routes = [
   {path: "", component: LayoutComponent, children: [
-    {path: '', component: HomeComponent},
+    {path: '', component: HomeComponent},{path: "advertisingDetails", component: AdvertisingDetailsComponent}
   ]
   },
 

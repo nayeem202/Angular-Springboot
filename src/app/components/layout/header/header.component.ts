@@ -10,6 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class HeaderComponent implements OnInit {
   type = "";
+  search="";
 
   advertising: any = [];
   
@@ -27,13 +28,13 @@ export class HeaderComponent implements OnInit {
 
 
   getCategoriseAdvertise(){
-    
     this.route.navigate(['/'],{queryParams: {type:this.type}})
-    
   }
 
-  
 
+  getSearchingAdvertise(){ 
+    this.route.navigate(['/'],{queryParams: {search:this.search}})
+  }
 
   
 

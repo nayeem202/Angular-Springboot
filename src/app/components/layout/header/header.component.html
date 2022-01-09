@@ -77,8 +77,9 @@
 
 
 							<div class="search">
-								<input type="text" class="searchTerm" placeholder="What are you looking for?">
-								<button type="submit" class="searchButton">
+								
+								<input type="text"  [(ngModel)]="search"   class="searchTerm" placeholder="What are you looking for?">
+								<button type="submit" (click)="getSearchingAdvertise()" class="searchButton">
 									<i class="fa fa-search"></i>
 								</button>
 							</div>

@@ -14,29 +14,28 @@ export class HomeComponent implements OnInit {
 
   constructor(private route: Router, private http: HttpClient, private toastr: ToastrService, private activatedRoute: ActivatedRoute) { }
 
-
-
-
   ngOnInit(): void {
-    //this.getAll();
+   
 
     this.activatedRoute.queryParams.subscribe(params => {
       console.log("================" + params['type']);
       
-      if((params['type']) == undefined){
-        this.getAll();
-      }else{
+      if((params['type']) != undefined || (params['type']) != -1 || (params['type']) != ""){
         this.getByType(params['type'])
       }
+      if((params['search']) != ""){
+        this.getBySearch(params['search']) 
+
+      }if((params['search']) == "" || (params['type']) == undefined){
+        this.getAll();
+      }
+      
     })
-
   
-    // let headerC = new HeaderComponent(this.route, this.http, this.toastr);
-    // this.advertising = headerC.getCategoriseAdvertise();
-    //this.getByType(params['type'])
-  }
+  } 
 
 
+//Searching By Categories
 getByType(type:string){
  
   const header ={
@@ -47,14 +46,31 @@ getByType(type:string){
   this.advertising = res; 
   console.log(this.advertising);
   
-  console.log("load passed");
+  console.log("typeWise Search success");
     
 },  err => {
-  console.log("load failed");
+  console.log("typeWise Search failed");
 })
 }
 
 
+  ////Searching By Text
+  getBySearch(search: string){
+    const header ={
+      "Content-Type": "application/json"
+    };
+    this.http.get('http://localhost:9092/getAddvertisingBySearch/'+ search, {headers: header}).subscribe(res=>{;
+    console.log(res);   
+    this.advertising = res; 
+    console.log(this.advertising);
+    console.log("Full Search success");
+      
+  },  err => {
+    console.log("full Search failed");
+  })
+  }
+
+  
   getAll() {
     const header = {
       "Content-Type": "application/json"

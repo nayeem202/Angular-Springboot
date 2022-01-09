@@ -70,7 +70,7 @@
 							alt="logo" /></a>
 				</div><!-- Logo Block /- -->
 				<!-- Menu Block -->
-				<div class="col-md-10 menu-block">
+				<div class=" col-md-10 menu-block" style="width: 100%;">
 					<!-- nav -->
 					<nav class="navbar navbar-default primary-navigation">
 						<div class="navbar-header">
@@ -87,19 +87,24 @@
 
 						<a title="Add Property" (click)=" memberLogin()" class="newPull-right">Member Login</a>
 						<div class="dropdown">
-
+							<!--
 							<button class="btn newPull-right" type="button" id="dropdownMenu2" data-toggle="dropdown"
 								aria-haspopup="true" aria-expanded="false">
 								Category <i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
 							</button>
+							-->
 
 							<div>
 							
-									<select name="type" id=""  [(ngModel)]="type" (click)= "getCategoriseAdvertise()">
-										<option value="-1"> Choose  your  House  type  </option>
+									<select style="width: 100%; height: 40px; background-color: rgb(121, 180, 69);" aria-placeholder="Select Your House Type"   name="type"   [(ngModel)]="type" (click)= "getCategoriseAdvertise()">
+										<option value="- 1" style="background-color: aliceblue;"> Choose  your  House  type  </option>
 										<option value="Apartment">Apartment</option>
 										<option value="Duplex">Duplex</option>
-
+										<option value="Single Family Detached House">Single Family Detached House</option>
+										<option value="Villa">Villa</option>
+										<option value="Tiny home">Tiny home</option>
+										<option value="Commercial Space">Commercial Space</option>
+										<option value="Office">Office</option>
 									</select>
 
 

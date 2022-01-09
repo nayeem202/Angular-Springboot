@@ -28,22 +28,8 @@ export class HeaderComponent implements OnInit {
 
   getCategoriseAdvertise(){
     
+    this.route.navigate(['/'],{queryParams: {type:this.type}})
     
-  //   console.log(this.type);
-  //   const header ={
-  //     "Content-Type": "application/json"
-  //   };
-  //   this.http.get('http://localhost:9092/getAddvertisingByType/'+ this.type, {headers: header}).subscribe(res=>{;
-  //   console.log(res);   
-  //   this.advertising = res; 
-  //   console.log(this.advertising);
-    
-  //   console.log("load passed");
-      
-  // },  err => {
-  //   console.log("load failed");
-  // })
-
   }
 
   

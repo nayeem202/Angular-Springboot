@@ -12,6 +12,7 @@ import { Advertise } from './advertiseModel';
   styleUrls: ['./advertise.component.css']
 })
 export class AdvertiseComponent implements OnInit {
+  user : User = new User();
   submitted = false;
   advertise: Advertise = new Advertise();
   isSave: boolean = true
@@ -21,6 +22,7 @@ export class AdvertiseComponent implements OnInit {
 
   constructor(private route: Router,  private http: HttpClient, private toastr: ToastrService) { }
 
+  
 
   ngOnInit(): void {
     
@@ -35,6 +37,30 @@ export class AdvertiseComponent implements OnInit {
  
 
   userM: User = JSON.parse(localStorage.getItem("current_user") as string);
+
+
+  // for sending Messaage
+  subject = "Confirmation Mail"
+  message = " Congratulations your Post is  Published"
+  to = this.userM.email
+
+  
+  mail = { to :this.to , subject: this.subject , message : this.message}
+  
+
+  sendMail(){
+    this.submitted = true;
+    const headers = {'content-Type' : 'application/json' }; 
+    this.http.post("http://localhost:9092/send_amail",JSON.stringify(this.mail),{headers:headers}).subscribe(data=>{
+
+    console.log(data);
+    }, err => {
+     console.log("error");
+     
+    })
+
+  }
+  
 
 
   fileChange(files: any) {
@@ -64,7 +90,9 @@ export class AdvertiseComponent implements OnInit {
       .subscribe(res => {
         console.log(res);
         this.toastr.success("Successfully Published")
+        this.sendMail();
       }, err => {
+        
         this.toastr.error("Post failed")
       })
 
@@ -134,8 +162,6 @@ export class AdvertiseComponent implements OnInit {
 
     }, err => {
       console.log("load failed");
-
-
     })
   }
 

@@ -14,7 +14,7 @@ import { SignupComponent } from './components2/signup/signup.component';
 
 const routes: Routes = [
   {path: "", component: LayoutComponent, children: [
-    {path: '', component: HomeComponent},{path: "advertisingDetails", component: AdvertisingDetailsComponent}
+    {path: '', component: HomeComponent},{path: "advertisingDetails/:id", component: AdvertisingDetailsComponent}
   ]
   },
 

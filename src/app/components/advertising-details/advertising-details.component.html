@@ -27,15 +27,15 @@
                 <!-- Slider Section -->
                 <div id="property-detail1-slider" class="carousel slide property-detail1-slider" data-ride="carousel">
                     <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
+                    <div class="carousel-inner" role="listbox"  >
                         <div class="item active">
+                            <img src="{{singleAdvertising.imagesUri}}" alt="Slide">
+                        </div>
+                        <div class="item">
+                            <img src="{{singleAdvertising.imagesUri}}" alt="Slide">
+                        </div>
+                        <div class="item">
                             <img src="/assets/images/details/detail-slide-1.jpg" alt="Slide">
-                        </div>
-                        <div class="item">
-                            <img src="images/details/detail-slide-1.jpg" alt="Slide">
-                        </div>
-                        <div class="item">
-                            <img src="images/details/detail-slide-1.jpg" alt="Slide">
                         </div>
                         <div class="item">
                             <img src="images/details/detail-slide-1.jpg" alt="Slide">
@@ -52,19 +52,19 @@
                     </a>
                 </div><!-- Slider Section /- -->
                 <div class="property-header">
-                    <h3>15421 Southwest 39th Terrace - Miami <span>For Rent</span></h3>
+                    <h3>{{singleAdvertising.location}}<span>For Rent</span></h3>
                     <ul>
-                        <li>$320/mo</li>
-                        <li>Product ID : 201354</li>
-                        <li><i class="fa fa-expand"></i>3326 sq</li>
-                        <li><i><img src="images/icon/bed-icon.png" alt="bed-icon" /></i>3</li>
-                        <li><i><img src="images/icon/bath-icon.png" alt="bath-icon" /></i>2</li>
-                        <li><i class="fa fa-car"></i>1</li>
+                        <li>&#2547; {{singleAdvertising.price}}</li>
+                        <li>Advertising Code :{{singleAdvertising.advertisingId}}</li>
+                        <li><i class="fa fa-expand"></i>{{singleAdvertising.sqft}}</li>
+                        <li><i><img src="/assets/images/icon/bed-icon.png" alt="bed-icon" /></i>  {{singleAdvertising.bedrooms}} </li>
+                        <li><i><img src="/assets/images/icon/bath-icon.png" alt="bath-icon" /></i>   {{singleAdvertising.bathrooms}} </li>
+                        
                     </ul>
-                    <a title="print" href="#"><i class="fa fa-print"></i> Print</a>
+                    
                 </div>
-                <div class="single-property-details">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper libero sed ante auctor vel gravida nunc placerat. Suspendisse molestie posuere sem, in viverra dolor venenatis sit amet. Aliquam gravida nibh quis justo pulvinar luctus. Phasellus a malesuada massa. Mauris elementum tempus nisi, vitae ullamcorper sem ultricies vitae. Nullam consectetur lacinia nisi, quis laoreet magna pulvinar in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In hac habitasse platea dictumst. Cum sociis natoque penatibus et magnis.dis parturient montes, nascetur ridiculus mus.</p>
+                <div >
+                 <p>   {{singleAdvertising.additionalinformation}}</p>
                 </div>
 
             <!--
@@ -270,68 +270,7 @@
             -->
 
 
-                <div class="other-properties row">
-                    <!-- Col-md-4 -->
-                    <div class="col-md-4 col-xs-12 rent-block">
-                        <!-- Property Main Box -->
-                        <div class="property-main-box">
-                            <div class="property-images-box">
-                                <span>R</span>
-                                <a href="#"><img src="images/rent/rent-1.jpg" alt="rent" /></a>
-                                <h4>&dollar;380 / pm</h4>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="property-details">
-                                <a href="#">Southwest 39th Terrace</a>
-                                <ul>
-                                    <li><i class="fa fa-expand"></i>3326 sq</li>
-                                    <li><i><img src="images/icon/bed-icon.png" alt="bed-icon" /></i>3</li>
-                                    <li><i><img src="images/icon/bath-icon.png" alt="bath-icon" /></i>2</li>
-                                </ul>
-                            </div>
-                        </div><!-- Property Main Box -->
-                    </div><!-- Col-md-4 /- -->
-                    <!-- Col-md-4 -->
-                    <div class="col-md-4 sale-block">
-                        <!-- Property Main Box -->
-                        <div class="property-main-box">
-                            <div class="property-images-box">
-                                <span>S</span>
-                                <a href="#"><img src="images/rent/rent-4.jpg" alt="rent" /></a>
-                                <h4>&dollar;330000</h4>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="property-details">
-                                <a href="#">20 Apartments of Type A</a>
-                                <ul>
-                                    <li><i class="fa fa-expand"></i>3326 sq</li>
-                                    <li><i><img src="images/icon/bed-icon.png" alt="bed-icon" /></i>3</li>
-                                    <li><i><img src="images/icon/bath-icon.png" alt="bath-icon" /></i>2</li>
-                                </ul>
-                            </div>
-                        </div><!-- Property Main Box /- -->
-                    </div><!-- col-md-4 /- -->
-                    <!-- Col-md-4 -->
-                    <div class="col-md-4 rent-block">
-                        <!-- Property Main Box -->
-                        <div class="property-main-box">
-                            <div class="property-images-box">
-                                <span>R</span>
-                                <a href="#"><img src="images/rent/rent-3.jpg" alt="rent" /></a>
-                                <h4>&dollar;380 / pm</h4>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="property-details">
-                                <a href="#">15 Apartments of Type B</a>
-                                <ul>
-                                    <li><i class="fa fa-expand"></i>3326 sq</li>
-                                    <li><i><img src="images/icon/bed-icon.png" alt="bed-icon" /></i>3</li>
-                                    <li><i><img src="images/icon/bath-icon.png" alt="bath-icon" /></i>2</li>
-                                </ul>
-                            </div>
-                        </div><!-- Property Main Box -->
-                    </div><!-- Col-md-4 /- -->
-                </div>
+              
             </div><!-- col-md-9 /- -->
             <!-- col-md-3 -->
             <div class="col-md-3 col-sm-6 p_r_z property-sidebar">
@@ -433,36 +372,7 @@
                         <input type="submit" value="Search Now" class="btn">
                     </form>
                 </aside>
-                <aside class="widget widget-property-featured">
-                    <h2 class="widget-title">featured<span>property</span></h2>
-                    <div class="property-featured-inner">
-                        <div class="col-md-4 col-sm-3 col-xs-2 p_z">
-                            <a href="#" title="Fetured Property"><img src="images/aa-listing/feacture1.jpg" alt="feacture1" /></a>
-                        </div>
-                        <div class="col-md-8 col-sm-9 col-xs-10 featured-content">
-                            <a href="#" title="Fetured Property">Southwest 39th Terrace</a>
-                            <h3>&dollar;350000</h3>
-                        </div>
-                    </div>
-                    <div class="property-featured-inner">
-                        <div class="col-md-4 col-sm-3 col-xs-2 p_z">
-                            <a href="#" title="Fetured Property"><img src="images/aa-listing/feacture2.jpg" alt="feacture2" /></a>
-                        </div>
-                        <div class="col-md-8 col-sm-9 col-xs-10 featured-content">
-                            <a href="#" title="Fetured Property">>Southwest 39th Terrace</a>
-                            <h3>&dollar;350000</h3>
-                        </div>
-                    </div>
-                    <div class="property-featured-inner">
-                        <div class="col-md-4 col-sm-3 col-xs-2 p_z">
-                            <a href="#" title="Fetured Property"><img src="images/aa-listing/feacture3.jpg" alt="feacture3" /></a>
-                        </div>
-                        <div class="col-md-8 col-sm-9 col-xs-10 featured-content">
-                            <a href="#" title="Fetured Property">Southwest 39th Terrace</a>
-                            <h3>&dollar;350000</h3>
-                        </div>
-                    </div>
-                </aside>
+                
             </div><!-- col-md-3 /- -->
         </div>
     </div><!-- container /- -->

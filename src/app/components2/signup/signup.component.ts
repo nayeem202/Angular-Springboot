@@ -26,8 +26,13 @@ export class SignupComponent implements OnInit {
 
   }
 
+    check(){
+      console.log(this.user);
+
+    }
 
   save(){
+   
     
     this.toastr.success("Successfully Registered")
     this.submitted = true;

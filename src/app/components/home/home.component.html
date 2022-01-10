@@ -221,12 +221,12 @@
 					<div class="property-main-box">
 						<div class="property-images-box" style="width: 220;">
 							<p>{{item.type}}</p>
-							<a title="Property Image" [routerLink]= > <img src="{{item.imagesUri}}"   style="height: 310px; width: 445px;"/> </a>
+							<a title="Property Image" [routerLink]="['/advertisingDetails', item.advertisingId]" > <img src="{{item.imagesUri}}"   style="height: 310px; width: 445px;"/> </a>
 						</div>
 						<div class="clearfix"></div>
 						<div class="property-details" style="width: 445px; height: 230px;">
 							<a title="Property Title" href="#">{{item.location}}</a>
-							<h4>&#2547; {{item.price}}</h4>
+							<h4>&#2547; {{item.price}} </h4>
                           
                                 <p>{{item.additionalinformation}}<a title="more" href="#">...more</a></p>
                             

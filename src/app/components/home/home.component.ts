@@ -19,16 +19,19 @@ export class HomeComponent implements OnInit {
 
     this.activatedRoute.queryParams.subscribe(params => {
       console.log("================" + params['type']);
-      
+      this.getByType(params['type'])
+     
+      /*
       if((params['type']) != undefined || (params['type']) != -1 || (params['type']) != ""){
         this.getByType(params['type'])
       }
       if((params['search']) != ""){
         this.getBySearch(params['search']) 
 
-      }if((params['search']) == "" || (params['type']) == undefined){
+      }if((params['search']) == "" || (params['type']) == undefined ||  (params['type']) == -1 || (params['type']) == ""){
         this.getAll();
       }
+   */
       
     })
   

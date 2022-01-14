@@ -37,7 +37,7 @@
 		type='text/css'>
 
 
-	
+
 </head>
 
 <body data-offset="200" data-spy="scroll" data-target=".primary-navigation">
@@ -77,12 +77,15 @@
 
 
 							<div class="search">
-								
-								<input type="text"  [(ngModel)]="search"   class="searchTerm" placeholder="What are you looking for?">
+
+								<input type="text" [(ngModel)]="search" class="searchTerm"
+									placeholder="What are you looking for?">
 								<button type="submit" (click)="getSearchingAdvertise()" class="searchButton">
 									<i class="fa fa-search"></i>
 								</button>
 							</div>
+
+
 
 						</div>
 
@@ -96,28 +99,39 @@
 							-->
 
 							<div>
-							
-									<select style="width: 100%; height: 40px; background-color: rgb(121, 180, 69);" aria-placeholder="Select Your House Type"   name="type"   [(ngModel)]="type" (click)= "getCategoriseAdvertise()">
-										<option value="-1" style="background-color: aliceblue;"> Choose  your  House  type  </option>
-										<option value="Apartment">Apartment</option>
-										<option value="Duplex">Duplex</option>
-										<option value="Single Family Detached House">Single Family Detached House</option>
-										<option value="Villa">Villa</option>
-										<option value="Tiny home">Tiny home</option>
-										<option value="Commercial Space">Commercial Space</option>
-										<option value="Office">Office</option>
-									</select>
+
+								<select style="width: 100%; height: 40px; background-color: rgb(121, 180, 69);"
+									aria-placeholder="Select Your House Type" name="type" [(ngModel)]="type"
+									(click)="getCategoriseAdvertise()">
+									<option value="-1" style="background-color: aliceblue;"> Choose your House type
+									</option>
+									<option value="Apartment">Apartment</option>
+									<option value="Duplex">Duplex</option>
+									<option value="Single Family Detached House">Single Family Detached House</option>
+									<option value="Villa">Villa</option>
+									<option value="Tiny home">Tiny home</option>
+									<option value="Commercial Space">Commercial Space</option>
+									<option value="Office">Office</option>
+								</select>
 
 
-									<!--
+								<!--
 									<button class="dropdown-item" value="Apartment"  [(ngModel)]="Apartment" type="button">Apartment</button>
 								-->
-								
+
 							</div>
 
 						</div>
+
+						
+						<div>
+							<button class="btn btn-info" [routerLink]="['/']"  type="button" id="dropdownMenu2" 
+								aria-haspopup="true" aria-expanded="false">
+								Home 
+							</button>
+						</div>
 					</nav>
-			
+
 
 
 				</div><!-- Menu Block /- -->

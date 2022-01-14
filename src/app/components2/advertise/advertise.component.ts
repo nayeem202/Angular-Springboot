@@ -99,11 +99,7 @@ export class AdvertiseComponent implements OnInit {
     console.log(this.advertise.location);
 
   }
-
-
-
-
-
+  
     updateAdvertise() {
 
     const formData: FormData = new FormData();

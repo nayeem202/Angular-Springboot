@@ -1,5 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { Contact } from 'src/app/components2/my-advertisement/contactModel';
 import { AdvertisingService } from 'src/app/components2/services/advertising.service';
 
 @Component({
@@ -8,12 +11,16 @@ import { AdvertisingService } from 'src/app/components2/services/advertising.ser
   styleUrls: ['./advertising-details.component.css']
 })
 export class AdvertisingDetailsComponent implements OnInit {
- 
-  singleAdvertising: any;
+ contact : Contact = new Contact();
+
+
+ singleAdvertising: any;
   getMenuId: any;
 
+ 
 
-  constructor(private advertisigService: AdvertisingService, private param: ActivatedRoute) { }
+
+  constructor(private advertisigService: AdvertisingService, private param: ActivatedRoute, private http: HttpClient, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.getMenuId =   this.param.snapshot.paramMap.get('id');
@@ -25,5 +32,48 @@ export class AdvertisingDetailsComponent implements OnInit {
       console.log(err); 
     })
   }
+
+
+ 
+  
+ 
+  
+
+  to : any
+  subject : any
+  message : any
+  mail : object = {}
+
+  sendingEmailToOwner(){
+
+    this.to = this.singleAdvertising.user.email
+    this.subject = "Someone wants to connect with you For House Rent"
+    this.message = JSON.stringify(this.contact);
+  
+    this.mail = {to : this.to, subject: this.subject , message : this.message}
+  
+    console.log(this.mail);
+    console.log(this.contact);
+    
+  
+
+      console.log(this.contact.renteremail);
+      const headers = {'content-Type' : 'application/json' }; 
+      this.http.post("http://localhost:9092/send_amail",JSON.stringify(this.mail),{headers:headers}).subscribe(data=>{
+  
+      console.log(data);
+      this.toastr.success("Your mail Successfully sent to House Owner")
+      }, err => {
+
+       console.log("error");
+       this.toastr.error("This message can't be sent right now. Please try again later")
+      })
+  
+   
+
+    
+  }
+
+
 
 }

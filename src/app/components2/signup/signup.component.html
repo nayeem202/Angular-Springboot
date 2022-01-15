@@ -22,8 +22,15 @@
 
                             <div class="form-group">
                                 <label for="email"><i class="fas fa-envelope-open-text"></i></label>
-                                <input type="email" name="email"  [(ngModel)]= "user.email" id="email" placeholder="Your Email"/>
+                                <input type="email" name="email"  [(ngModel)]= "user.email" id="email" placeholder="Type Your Email"/>
                             </div>
+
+                            <div class="form-group">
+                                <label for="phone"><i class="fas fa-phone"></i></label>
+                                <input type="text" name="email"  [(ngModel)]= "user.phone" id="phone" placeholder="Type Your Phone Number"/>
+                            </div>
+
+
                             <div class="form-group">
                                 <label for="pass"><i class="fas fa-lock"></i></label>
                                 <input type="password" name="password"  [(ngModel)]= "user.password" id="password" placeholder="Password"/>

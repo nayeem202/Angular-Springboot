@@ -1,15 +1,16 @@
- export class User {
+export class User {
 
-    id: number=0;
+   id: number = 0;
 
-    name : string="";
-    username: string="";
-    password: any;
-    email: string="";
+   name: string = "";
+   username: string = "";
+   password: any;
+   email: string = "";
+   phone: string = "";
 
-    
-    constructor(){
-        
-    }
 
- }
+   constructor() {
+
+   }
+
+}

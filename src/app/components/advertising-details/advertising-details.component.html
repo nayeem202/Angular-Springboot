@@ -214,6 +214,9 @@
                     <div class="property-map">
                         <div id="gmap" class="mapping"></div>
                     </div>
+
+                    --
+
                     <div class="property-map contact-agent">
                         <h3>Contact Agent</h3>
                         <div class="col-md-4 agent-details">
@@ -268,6 +271,43 @@
                     </div>
                 </div>
             -->
+
+            <div class="property-map contact-agent">
+                <h3>Contact: House Owner</h3>
+                <div class="col-md-4 agent-details">
+                    <div class="agent-header">
+                        <div class="agent-name">
+                            <h5><u>{{singleAdvertising.user.name}}</u></h5>
+                         
+                        </div>
+                        
+                        <p style="font-size: 20px;">Our Latest listed houses and check out the facilities </p>
+                    </div>
+                </div>
+                <div class="col-md-8 agent-information p_z">
+                    <div class="agent-info">
+                        <p><i class="fa fa-phone"></i>0123 456 7890</p>
+                        <p>
+                            <i class="fa fa-envelope-o"></i>
+                            <a href="mailto:{{singleAdvertising.user.email}}" title="mail"> {{singleAdvertising.user.email}} </a>
+                        </p>
+                        <h2>Send Instant Email</h2>
+                    </div>
+                    <div class="agent-form">
+                        
+                        <form>
+                            <div class="col-md-6 p_l_z">
+                                <input type="text" placeholder="Your Name" />
+                            </div>
+                            <div class="col-md-6 p_r_z">
+                                <input type="text" placeholder="Your Email ID" />
+                            </div>
+                            <input type="text" placeholder="Message" />
+                            <input type="submit" value="Submit" class="btn">
+                        </form>
+                    </div>
+                </div>
+            </div>
 
 
               

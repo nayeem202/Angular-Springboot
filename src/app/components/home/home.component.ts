@@ -92,5 +92,11 @@ export class HomeComponent implements OnInit {
   }
 
 
+  memberLogin(){
+    this.route.navigateByUrl("admin");
+    }
+  
+
+
 
 }

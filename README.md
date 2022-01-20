@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
 Clone this Project on your Pc and open it with VS code application and go to terminal and command :  npm install  .
 
-After completing installation run this project by- npm start  command .
+After completing installation run this project by- npm start  command 
 
 
 

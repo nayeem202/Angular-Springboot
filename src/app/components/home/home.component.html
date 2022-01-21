@@ -109,76 +109,96 @@
             <div class="col-md-10 col-sm-9 p_l_z">
                 
                 
-                <select>
+                <select [(ngModel)]="location">
                     <option>Location</option>
-                    <option>Location</option>
-                    <option>Location</option>
-                    <option>Location</option>
-                    <option>Location</option>
+                    <option value="Dhanmondi">Dhanmondi</option>
+                    <option value="Banani">Banani</option>
+                    <option value="Mirpur">Mirpur</option>
+                    <option value="Gulshan">Gulshan</option>
+                   
                 </select>
                 
-                <select>
-                    <option>Type</option>
-                    <option>Type</option>
-                    <option>Type</option>
-                    <option>Type</option>
-                    <option>Type</option>
+                <select [(ngModel)]="type">
+                    <option>House Type</option>
+                    <option value="Apartment">Apartment</option>
+                    <option value="Duplex">Duplex</option>
+                    <option value="Single Family Detached House">Single Family Detached House</option>
+                    <option value="Villa">Villa</option>
+                    <option value="Tiny home">Tiny home</option>
+                    <option value="Commercial Space">Commercial Space</option>
+                    <option value="Office">Office</option>
                 </select>
                 
-                <select>
+                <select [(ngModel)]="status">
                     <option>Status</option>
-                    <option>Status</option>
-                    <option>Status</option>
-                    <option>Status</option>
-                    <option>Status</option>
+                    <option value="Bachelor">Bachelor</option>
+                    <option value="Family(>=3 Members)">Family(>=3 Members)</option>
+                    <option value="Family(3+ Members)">Family(3+ Members)</option>
+                   
                 </select>
                 
-                <select>
+                <select [(ngModel)]="bedrooms">
                     <option>Bedrooms</option>
-                    <option>Bedrooms</option>
-                    <option>Bedrooms</option>
-                    <option>Bedrooms</option>
-                    <option>Bedrooms</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+
                 </select>
                 
-                <select>
+                <select [(ngModel)]="bathrooms">
                     <option>Bathrooms</option>
-                    <option>Bathrooms</option>
-                    <option>Bathrooms</option>
-                    <option>Bathrooms</option>
-                    <option>Bathrooms</option>
+                    <option value="0">0</option>
+                   <option value="1">1</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+                   <option value="4">4</option>
+                   <option value="5">5</option>
                 </select>
                 
-                <select>
+                <select [(ngModel)]="minprice">
                     <option>Min Price</option>
-                    <option>Min Price</option>
-                    <option>Min Price</option>
-                    <option>Min Price</option>
-                    <option>Min Price</option>
+                   <option value="0">0</option>
+                   <option value="5000">5000</option>
+                   <option value="10000">10000</option>
+                   <option value="20000">20000</option>
+                   <option value="40000">40000</option>
+                   <option value="80000">80000</option>
                 </select>
                 
-                <select>
+                <select [(ngModel)]="maxprice">
                     <option>Max Price</option>
-                    <option>Max Price</option>
-                    <option>Max Price</option>
-                    <option>Max Price</option>
-                    <option>Max Price</option>
+                    <option value="10000">10000</option>
+                    <option value="20000">20000</option>
+                    <option value="30000">30000</option>
+                    <option value="60000">60000</option>
+                    <option value="100000">100000</option>
+                    <option value="200000">200000</option>
+                    <option value="400000">400000</option>
                 </select>
                 
-                <select>
+                <select [(ngModel)]="minsqft">
                     <option>Min Sqft</option>
-                    <option>Min Sqft</option>
-                    <option>Min Sqft</option>
-                    <option>Min Sqft</option>
-                    <option>Min Sqft</option>
+                   <option value="0">0</option>
+                   <option value="800">800</option>
+                   <option value="1600">1600</option>
+                   <option value="2400">2400</option>
+                   <option value="3600">3600</option>
+                  
                 </select>
                 
-                <select>
+                <select [(ngModel)]="maxsqft">
                     <option>Max Sqft</option>
-                    <option>Max Sqft</option>
-                    <option>Max Sqft</option>
-                    <option>Max Sqft</option>
-                    <option>Max Sqft</option>
+                   <option value="800">800</option>
+                   <option value="3600">3600</option>
+                   <option value="4200">4200</option>
+                   <option value="8600">8600</option>
+                   <option value="10000">10000</option>
                 </select>
 
             </div><!-- col-md-10 /- -->
@@ -186,7 +206,7 @@
             <div class="col-md-2 col-sm-3">
                 <div class="section-header">
                     <h3><span>Search</span>House</h3>
-                    <a title="search" class="btn" href="#">Search</a>
+                    <a title="search" class="btn" (click)="getAdvancedSearching()">Search</a>
                 </div>
 
 

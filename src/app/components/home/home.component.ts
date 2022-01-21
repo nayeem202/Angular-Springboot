@@ -12,10 +12,23 @@ import { HeaderComponent } from '../layout/header/header.component';
 export class HomeComponent implements OnInit {
   advertising: any = [];
 
+
+
+  location="";
+  minprice="";
+  maxprice="";
+  type = "";
+  minsqft="";
+  maxsqft=""
+  status="";
+  bedrooms=""
+  bathrooms="";
+
+
   constructor(private route: Router, private http: HttpClient, private toastr: ToastrService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-
+    
 
     this.activatedRoute.queryParams.subscribe(params => {
 
@@ -91,6 +104,27 @@ export class HomeComponent implements OnInit {
     })
   }
 
+
+  //get Advanced searching
+  getAdvancedSearching() { 
+    const header = {
+      "Content-Type": "application/json"
+    };
+    this.http.get('http://localhost:9092/getAdvancedSearching/'+this.location+'/'+
+    this.minprice+'/'+this.maxprice+'/'+this.minsqft+'/'+this.maxsqft+'/'+this.type+'/'+this.status+'/'+this.bedrooms+'/'+this.bathrooms, { headers: header }).subscribe(res => {
+      ;
+      console.log(res);
+      this.advertising = res;
+      console.log(this.advertising);
+
+      console.log("Advanced Search success");
+
+    }, err => {
+      console.log("advanched Search failed");
+    })
+ 
+  
+  }
 
   memberLogin(){
     this.route.navigateByUrl("admin");

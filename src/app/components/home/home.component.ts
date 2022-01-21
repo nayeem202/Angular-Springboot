@@ -14,15 +14,15 @@ export class HomeComponent implements OnInit {
 
 
 
-  location="";
-  minprice="";
-  maxprice="";
-  type = "";
-  minsqft="";
-  maxsqft=""
-  status="";
-  bedrooms=""
-  bathrooms="";
+  location="Location";
+  minprice="Min Price";
+  maxprice="Max Price";
+  type = "House Type";
+  minsqft="Min Sqft";
+  maxsqft="Max Sqft"
+  status="Status";
+  bedrooms="Bedrooms"
+  bathrooms="Bathrooms";
 
 
   constructor(private route: Router, private http: HttpClient, private toastr: ToastrService, private activatedRoute: ActivatedRoute) { }

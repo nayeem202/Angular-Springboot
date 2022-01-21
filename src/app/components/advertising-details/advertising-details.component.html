@@ -322,94 +322,107 @@
             <div class="col-md-3 col-sm-6 p_r_z property-sidebar">
                 <aside class="widget widget-search">
                     <h2 class="widget-title">search<span>Your Dream Home </span></h2>
-                    <form>
+                
                        
-                        <select>
-                            <option value="selected">Location</option>
-                            <option value="one">One</option>
-                            <option value="two">Two</option>
-                            <option value="three">Three</option>
-                            <option value="four">Four</option>
-                            <option value="five">Five</option>
-                        </select>
-                        <select>
-                            <option value="selected">Type</option>
-                            <option value="one">One</option>
-                            <option value="two">Two</option>
-                            <option value="three">Three</option>
-                            <option value="four">Four</option>
-                            <option value="five">Five</option>
-                        </select>
-                        <select>
-                            <option value="selected">Status</option>
-                            <option value="one">One</option>
-                            <option value="two">Two</option>
-                            <option value="three">Three</option>
-                            <option value="four">Four</option>
-                            <option value="five">Five</option>
-                        </select>
+                     
+                <select name="" id="" [(ngModel)]="location">
+                    <option selected disabled>Location</option>
+                    <option value="Dhanmondi">Dhanmondi</option>
+                    <option value="Banani">Banani</option>
+                    <option value="Mirpur">Mirpur</option>
+                    <option value="Gulshan">Gulshan</option>
+                   
+                </select>
+                <select [(ngModel)]="type">
+                    <option selected disabled>House Type</option>
+                    <option value="Apartment">Apartment</option>
+                    <option value="Duplex">Duplex</option>
+                    <option value="Single Family Detached House">Single Family Detached House</option>
+                    <option value="Villa">Villa</option>
+                    <option value="Tiny home">Tiny home</option>
+                    <option value="Commercial Space">Commercial Space</option>
+                    <option value="Office">Office</option>
+                </select>
+                <select [(ngModel)]="status">
+                    <option selected disabled>Status</option>
+                    <option value="Bachelor">Bachelor</option>
+                    <option value="Family(>=3 Members)">Family(>=3 Members)</option>
+                    <option value="Family(3+ Members)">Family(3+ Members)</option>
+                   
+                </select>
                         <div class="col-md-6 col-sm-6 p_l_z">
-                            <select>
-                                <option value="selected">Beds</option>
-                                <option value="one">One</option>
-                                <option value="two">Two</option>
-                                <option value="three">Three</option>
-                                <option value="four">Four</option>
-                                <option value="five">Five</option>
+                            <select [(ngModel)]="bedrooms">
+                                <option selected disabled>Bedrooms</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+            
                             </select>
                         </div>
                         <div class="col-md-6 col-sm-6 p_r_z">
-                            <select>
-                                <option value="selected">Baths</option>
-                                <option value="one">One</option>
-                                <option value="two">Two</option>
-                                <option value="three">Three</option>
-                                <option value="four">Four</option>
-                                <option value="five">Five</option>
+                            <select [(ngModel)]="bathrooms">
+                                <option selected disabled>Bathrooms</option>
+                                <option value="0">0</option>
+                               <option value="1">1</option>
+                               <option value="2">2</option>
+                               <option value="3">3</option>
+                               <option value="4">4</option>
+                               <option value="5">5</option>
                             </select>
                         </div>
                         <div class="col-md-6 col-sm-6 p_l_z">
-                            <select>
-                                <option value="selected">Min Price</option>
-                                <option value="one">One</option>
-                                <option value="two">Two</option>
-                                <option value="three">Three</option>
-                                <option value="four">Four</option>
-                                <option value="five">Five</option>
+                            <select [(ngModel)]="minprice">
+                                <option selected disabled>Min Price</option>
+                               <option value="0">0</option>
+                               <option value="5000">5000</option>
+                               <option value="10000">10000</option>
+                               <option value="20000">20000</option>
+                               <option value="40000">40000</option>
+                               <option value="80000">80000</option>
                             </select>
                         </div>
                         <div class="col-md-6 col-sm-6 p_r_z">
-                            <select>
-                                <option value="selected">Max Price</option>
-                                <option value="one">$3000</option>
-                                <option value="two">$30000</option>
-                                <option value="three">$300000</option>
-                                <option value="four">$3000000</option>
-                                <option value="five">$3000000000000000</option>
+                            <select [(ngModel)]="maxprice">
+                                <option selected disabled>Max Price</option>
+                                <option value="10000">10000</option>
+                                <option value="20000">20000</option>
+                                <option value="30000">30000</option>
+                                <option value="60000">60000</option>
+                                <option value="100000">100000</option>
+                                <option value="200000">200000</option>
+                                <option value="400000">400000</option>
                             </select>
                         </div>
                         <div class="col-md-6 col-sm-6 p_l_z">
-                            <select>
-                                <option value="selected">Min Sqft</option>
-                                <option value="one">One</option>
-                                <option value="two">Two</option>
-                                <option value="three">Three</option>
-                                <option value="four">Four</option>
-                                <option value="five">Five</option>
+                            <select [(ngModel)]="minsqft">
+                                <option selected disabled>Min Sqft</option>
+                               <option value="0">0</option>
+                               <option value="800">800</option>
+                               <option value="1600">1600</option>
+                               <option value="2400">2400</option>
+                               <option value="3600">3600</option>
+                              
                             </select>
                         </div>
                         <div class="col-md-6 col-sm-6 p_r_z">
-                            <select>
-                                <option value="selected">Max Sqft</option>
-                                <option value="one">One</option>
-                                <option value="two">Two</option>
-                                <option value="three">Three</option>
-                                <option value="four">Four</option>
-                                <option value="five">Five</option>
+                            <select [(ngModel)]="maxsqft">
+                                <option selected disabled>Max Sqft</option>
+                               <option value="800">800</option>
+                               <option value="3600">3600</option>
+                               <option value="4200">4200</option>
+                               <option value="8600">8600</option>
+                               <option value="10000">10000</option>
                             </select>
+
                         </div>
-                        <input type="submit" value="Search Now" class="btn">
-                    </form>
+                        <input type="submit" click="getAdvancedSearching()" value="Search Now" class="btn">
+                   
                 </aside>
                 
             </div><!-- col-md-3 /- -->

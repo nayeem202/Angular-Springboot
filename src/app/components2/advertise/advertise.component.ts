@@ -15,6 +15,7 @@ export class AdvertiseComponent implements OnInit {
   user : User = new User();
   submitted = false;
   advertise: Advertise = new Advertise();
+  
   isSave: boolean = true
 
   fileToUpload: any;
@@ -72,6 +73,7 @@ export class AdvertiseComponent implements OnInit {
 
 
   save() {
+   
     debugger;
     const formData: FormData = new FormData();
     formData.append('location', this.advertise['location']);

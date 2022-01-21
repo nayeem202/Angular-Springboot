@@ -9,7 +9,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  type = "";
+  type = "Choose your House type";
   search="";
 
   advertising: any = [];
@@ -37,7 +37,7 @@ export class HeaderComponent implements OnInit {
   }
 
   
-
+  
 
 
 

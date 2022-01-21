@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Contact } from 'src/app/components2/my-advertisement/contactModel';
 import { AdvertisingService } from 'src/app/components2/services/advertising.service';
@@ -17,10 +17,19 @@ export class AdvertisingDetailsComponent implements OnInit {
  singleAdvertising: any;
   getMenuId: any;
 
- 
+  
+  location="Location";
+  minprice="Min Price";
+  maxprice="Max Price";
+  type = "House Type";
+  minsqft="Min Sqft";
+  maxsqft="Max Sqft"
+  status="Status";
+  bedrooms="Bedrooms"
+  bathrooms="Bathrooms";
 
 
-  constructor(private advertisigService: AdvertisingService, private param: ActivatedRoute, private http: HttpClient, private toastr: ToastrService) { }
+  constructor(private route: Router,private advertisigService: AdvertisingService, private param: ActivatedRoute, private http: HttpClient, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.getMenuId =   this.param.snapshot.paramMap.get('id');
@@ -34,7 +43,10 @@ export class AdvertisingDetailsComponent implements OnInit {
   }
 
 
- 
+  getAdvancedSearching(){ 
+    this.route.navigate(['/'],{queryParams: {location:this.location}})
+  }
+  
   
  
   
@@ -69,8 +81,8 @@ export class AdvertisingDetailsComponent implements OnInit {
        this.toastr.error("This message can't be sent right now. Please try again later")
       })
   
-   
-
+      
+    
     
   }
 

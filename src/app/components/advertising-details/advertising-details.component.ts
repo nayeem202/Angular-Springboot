@@ -28,6 +28,7 @@ export class AdvertisingDetailsComponent implements OnInit {
   bedrooms="Bedrooms"
   bathrooms="Bathrooms";
 
+  adSearching:any
 
   constructor(private route: Router,private advertisigService: AdvertisingService, private param: ActivatedRoute, private http: HttpClient, private toastr: ToastrService) { }
 
@@ -43,8 +44,18 @@ export class AdvertisingDetailsComponent implements OnInit {
   }
 
 
+
+
+
   getAdvancedSearching(){ 
-    this.route.navigate(['/'],{queryParams: {location:this.location}})
+
+    this.adSearching = [this.location,this.minprice,this.maxprice
+    ,this.minsqft,this.maxsqft,this.type,this.status,this.bedrooms,this.bathrooms
+  ]
+  
+    console.log(this.adSearching);
+    this.route.navigate(['/'],{queryParams: {adSearching:this.adSearching}, 
+    })
   }
   
   

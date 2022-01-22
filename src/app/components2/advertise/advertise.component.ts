@@ -14,10 +14,9 @@ import { Advertise } from './advertiseModel';
 export class AdvertiseComponent implements OnInit {
   user : User = new User();
   submitted = false;
-  advertise: Advertise = new Advertise();
-  
+  advertise: Advertise = new Advertise(); 
   isSave: boolean = true
-
+  
   fileToUpload: any;
   advertising: any = [];
 

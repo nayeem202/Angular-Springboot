@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { HeaderComponent } from '../layout/header/header.component';
+import { AdvertisingDetailsComponent } from './../advertising-details/advertising-details.component';
 
 @Component({
   selector: 'app-home',
@@ -27,14 +28,19 @@ export class HomeComponent implements OnInit {
 
   constructor(private route: Router, private http: HttpClient, private toastr: ToastrService, private activatedRoute: ActivatedRoute) { }
 
-  ngOnInit(): void {
-    
+    ngOnInit(): void {
+
+      
 
     this.activatedRoute.queryParams.subscribe(params => {
+      
 
       if (params['search'] != undefined) {
         this.getBySearch(params['search'])
         console.log("========search========" + params['search']);
+      }
+      else if((params['adSearching']) != null){
+        this.getadvancedSearch(params['adSearching']);
       }
       else if ((params['type'] == undefined)) {
         this.getAll();
@@ -45,9 +51,41 @@ export class HomeComponent implements OnInit {
         this.getByType(params['type'])
         console.log("=======type=========" + params['type']);
       }
+     
     })
+   
 
   }
+
+  getadvancedSearch(adSearching: any){
+    //
+      let text =""
+      for (let i = 0; i < adSearching.length; i++) {
+        text += adSearching[i] + "/";
+      }
+      console.log(text);
+      
+
+    const header = {
+      "Content-Type": "application/json"
+    };
+    this.http.get('http://localhost:9092/getAdvancedSearching/'+text, { headers: header }).subscribe(res => {
+      ;
+      console.log(res);
+      this.advertising = res;
+      console.log("Advanced Search success");
+
+    }, err => {
+      console.log("advanched Search failed");
+    })
+
+
+
+  }
+
+
+
+
 
 
   //Searching By Categories
@@ -86,6 +124,9 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  
+
+
 
   getAll() {
     const header = {
@@ -122,8 +163,7 @@ export class HomeComponent implements OnInit {
     }, err => {
       console.log("advanched Search failed");
     })
- 
-  
+
   }
 
   memberLogin(){
@@ -131,6 +171,6 @@ export class HomeComponent implements OnInit {
     }
   
 
-
+    
 
 }

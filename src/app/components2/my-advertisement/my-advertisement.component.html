@@ -7,13 +7,15 @@
       <img src={{item.imagesUri}} class="card-img-top" width="320px" height="240" alt="userHousesImage">
       <div class="card-body">
         <h5 class="card-title">Post {{i+1}}</h5>
+          
         <p class="card-text">{{item.additionalinformation}}</p>
         <a (click)="editAdvertise(item)" class="btn btn-primary"><i class="fas fa-edit"></i> Modify</a>
         <a (click)="deleteAdvertise(item)" class="btn btn-danger ml-3"><i class="fas fa-trash-alt"></i> Delete</a>
       </div>
     </div>
 
-
+    
+  
 
   </div>
 </div>

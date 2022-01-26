@@ -1,5 +1,34 @@
+<linK href="/assets/libraries/owl-carousel/owl.carousel.css" rel="stylesheet" />
+<linK href="/assets/libraries/owl-carousel/owl.theme.css" rel="stylesheet" />
+
+
+<!--
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="{{singleAdvertising.imagesUri}}" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{{singleAdvertising.imagesUri}}" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{{singleAdvertising.imagesUri}}" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+-->
+
 <div class="page-content">
     <!-- Banner Section -->
+
     <div id="page-banner-section" class="page-banner-section container-fluid p_z">
         <img src="assets/images/aa-listing/you.png" alt="banner">
         <!-- Banner Inner -->
@@ -25,32 +54,35 @@
             <!-- col-md-9 -->
             <div class="col-md-9 col-sm-6 p_l_z">
                 <!-- Slider Section -->
-                <div id="property-detail1-slider" class="carousel slide property-detail1-slider" data-ride="carousel">
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox"  >
-                        <div class="item active">
-                            <img src="{{singleAdvertising.imagesUri}}" alt="Slide">
-                        </div>
-                        <div class="item">
-                            <img src="" alt="Slide">
-                        </div>
-                        <div class="item">
-                            <img src="/assets/images/details/detail-slide-1.jpg" alt="Slide">
-                        </div>
-                        <div class="item">
-                            <img src="images/details/detail-slide-1.jpg" alt="Slide">
-                        </div>
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img class="d-block w-100" src="{{singleAdvertising.imagesUri}}" alt="First slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="{{singleAdvertising.imgUri2}}" alt="Second slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="{{singleAdvertising.imgUri3}}" alt="Third slide">
+                      </div>
                     </div>
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#property-detail1-slider" role="button" data-slide="prev">
-                        <span class="fa fa-long-arrow-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
                     </a>
-                    <a class="right carousel-control" href="#property-detail1-slider" role="button" data-slide="next">
-                        <span class="fa fa-long-arrow-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
                     </a>
-                </div><!-- Slider Section /- -->
+                  </div>
+
+
+
+
+
+             
+                
+                <!-- Slider Section /- -->
                 <div class="property-header">
                     <h3>{{singleAdvertising.location}}<span>For Rent</span></h3>
                     <ul>

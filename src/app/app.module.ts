@@ -24,9 +24,11 @@ import { ToastrModule } from 'ngx-toastr';
 import { AdvertiseComponent } from './components2/advertise/advertise.component';
 import { MyAdvertisementComponent } from './components2/my-advertisement/my-advertisement.component';
 import { AdvertisingDetailsComponent } from './components/advertising-details/advertising-details.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
+   
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -45,6 +47,7 @@ import { AdvertisingDetailsComponent } from './components/advertising-details/ad
     
   ],
   imports: [
+    NgbModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

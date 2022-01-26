@@ -84,10 +84,12 @@ export class AdvertiseComponent implements OnInit {
     formData.append('sqft', this.advertise['sqft'].toString());
     formData.append('additionalinformation', this.advertise['additionalinformation']);
     formData.append('user_id', this.userM['id'].toString());
-    formData.append('file', this.fileToUpload, this.fileToUpload?.name);
+    formData.append('files', this.fileToUpload, this.fileToUpload?.name);
+    formData.append('files', this.fileToUpload, this.fileToUpload?.name);
+    formData.append('files', this.fileToUpload, this.fileToUpload?.name);
     this.submitted = true;
 
-    this.http.post("http://localhost:9092/saveadvertising_withfile", formData)
+    this.http.post("http://localhost:9092/saveadvertising_withMultipleFile", formData)
       .subscribe(res => {
         console.log(res);
         this.toastr.success("Successfully Published")

@@ -5,10 +5,12 @@ import { ToastrService } from 'ngx-toastr';
 import { Contact } from 'src/app/components2/my-advertisement/contactModel';
 import { AdvertisingService } from 'src/app/components2/services/advertising.service';
 
+
 @Component({
   selector: 'app-advertising-details',
   templateUrl: './advertising-details.component.html',
-  styleUrls: ['./advertising-details.component.css']
+  styleUrls: ['./advertising-details.component.css'],
+  
 })
 export class AdvertisingDetailsComponent implements OnInit {
  contact : Contact = new Contact();
@@ -16,6 +18,9 @@ export class AdvertisingDetailsComponent implements OnInit {
 
  singleAdvertising: any;
   getMenuId: any;
+
+
+ 
 
   
   location="Location";
@@ -30,7 +35,9 @@ export class AdvertisingDetailsComponent implements OnInit {
 
   adSearching:any
 
-  constructor(private route: Router,private advertisigService: AdvertisingService, private param: ActivatedRoute, private http: HttpClient, private toastr: ToastrService) { }
+  constructor(private route: Router,private advertisigService: AdvertisingService, private param: ActivatedRoute, private http: HttpClient, private toastr: ToastrService) {
+   
+   }
 
   ngOnInit(): void {
     this.getMenuId =   this.param.snapshot.paramMap.get('id');

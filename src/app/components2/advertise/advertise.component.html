@@ -12,7 +12,6 @@
                     <h3 style="color: rgb(12, 30, 46);">Publish your Advertise</h3>
                     <h5 class="text-center mb-4"></h5>
                     <form class="form-card" (ngSubmit)="isSave? save() : updateAdvertise()"
-                    
                         onsubmit="event.preventDefault()">
 
 
@@ -103,27 +102,39 @@
                         <div class="row justify-content-between text-left">
 
                             <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">
-                                    images <span class="text-danger"> *</span></label>
+                                    Images <span class="text-danger"> *</span></label>
 
-                                <input type="file" id="file" name="file" multiple (change)="fileChange($event.target)"><br><br>
+                                <input type="file" id="file" name="file" multiple
+                                    (change)="fileChange($event.target)"><br><br>
+                            </div>
+
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">
+                                    Video <span class="text-danger"> *</span></label>
+
+                                <input type="file" id="files" name="files" 
+                                    (change)="fileVChange($event.target)"><br><br>
                             </div>
 
 
                             <div class="form-group col-12 flex-column d-flex "> <label class="form-control-label px-3">
                                     Additional Information <span class="text-danger"> *</span></label> <textarea
                                     id="additionalinformation" [(ngModel)]="advertise.additionalinformation"
-                                    name="additionalinformation" placeholder="" onblur="validate(5)"></textarea> </div>
+                                    name="additionalinformation" placeholder="" onblur="validate(5)"></textarea>
+                            </div>
 
                         </div>
+
+
+
 
 
                         <div class="row justify-content-end">
-                            <div class="form-group col-sm-6"> <button type="submit"
-                                    class="btn-block btn-primary">{{ isSave?  'Save' :
+                            <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">{{
+                                    isSave? 'Save' :
                                     'Update'}}</button> </div>
                         </div>
 
-                        
+
 
 
                     </form>

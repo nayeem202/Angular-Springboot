@@ -17,8 +17,12 @@ export class AdvertiseComponent implements OnInit {
   advertise: Advertise = new Advertise(); 
   isSave: boolean = true
   
-  fileToUpload: any;
+  fileToUpload1: any;
+  fileToUpload2: any;
+  fileToUpload3: any;
   advertising: any = [];
+
+  
 
   constructor(private route: Router,  private http: HttpClient, private toastr: ToastrService) { }
 
@@ -65,8 +69,13 @@ export class AdvertiseComponent implements OnInit {
 
   fileChange(files: any) {
     debugger;
-    this.fileToUpload = files.files[0]
+    this.fileToUpload1 = files.files[0]
+    this.fileToUpload2 = files.files[1]
+    this.fileToUpload3 = files.files[2]
+   
   }
+
+
 
 
 
@@ -84,9 +93,10 @@ export class AdvertiseComponent implements OnInit {
     formData.append('sqft', this.advertise['sqft'].toString());
     formData.append('additionalinformation', this.advertise['additionalinformation']);
     formData.append('user_id', this.userM['id'].toString());
-    formData.append('files', this.fileToUpload, this.fileToUpload?.name);
-    formData.append('files', this.fileToUpload, this.fileToUpload?.name);
-    formData.append('files', this.fileToUpload, this.fileToUpload?.name);
+    formData.append('files', this.fileToUpload1, this.fileToUpload1?.name);
+    formData.append('files', this.fileToUpload2, this.fileToUpload2?.name);
+    formData.append('files', this.fileToUpload3, this.fileToUpload3?.name);
+    
     this.submitted = true;
 
     this.http.post("http://localhost:9092/saveadvertising_withMultipleFile", formData)
@@ -117,7 +127,7 @@ export class AdvertiseComponent implements OnInit {
     formData.append('sqft', this.advertise['sqft'].toString());
     formData.append('additionalinformation', this.advertise['additionalinformation']);
     formData.append('user_id', this.userM['id'].toString());
-    formData.append('file', this.fileToUpload, this.fileToUpload?.name);
+    formData.append('file', this.fileToUpload1, this.fileToUpload1?.name);
     this.submitted = true;
 
     
@@ -156,7 +166,6 @@ export class AdvertiseComponent implements OnInit {
       ;
       console.log(res);
       this.advertising = res;
-      console.log(this.advertising.location);
       console.log("load passed");
 
     }, err => {

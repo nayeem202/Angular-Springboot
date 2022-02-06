@@ -31,16 +31,19 @@
             <!-- col-md-9 -->
             <div class="col-md-9 col-sm-6 p_l_z">
                 <!-- Slider Section -->
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" >
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="{{singleAdvertising.imagesUri}}" style="height: 424px; width: 847px;" alt="First slide">
+                            <img class="d-block w-100" src="{{singleAdvertising.imagesUri}}"
+                                style="height: 424px; width: 847px;" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="{{singleAdvertising.imgUri}}" style="height: 424px; width: 847px;" alt="Second slide">
+                            <img class="d-block w-100" src="{{singleAdvertising.imgUri}}"
+                                style="height: 424px; width: 847px;" alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="{{singleAdvertising.imgUri3}}" style="height: 424px; width: 847px;" alt="Third slide">
+                            <img class="d-block w-100" src="{{singleAdvertising.imgUri3}}"
+                                style="height: 424px; width: 847px;" alt="Third slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -79,11 +82,26 @@
                 </div>
 
 
-                <div class="property-header">  
+                <div class="property-header">
                     <h3><span>Virtual Tour</span></h3>
-                    <video controls="controls"  style="width: 100%;height: auto;" name="Video Name" src="{{singleAdvertising.video}}"> </video>
-                 </div>
+                    <video controls="controls" style="width: 100%;height: auto;" name="Video Name"
+                        src="{{singleAdvertising.video}}"> </video>
+                </div>
+
+
+                <div class="property-header">
+
+                    <h3>My Google Maps Demo</h3>
+                    <!--The div element for the map -->
+                    <div id="map"></div>
                 
+                    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+                    <script
+                      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAD524KkygqiaZBTg3LE_8xlHXYSxgPwss&callback=initMap&libraries=&v=weekly"
+                      async
+                    ></script>
+
+                </div>
 
 
 

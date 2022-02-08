@@ -13,6 +13,10 @@ import { AdvertisingService } from 'src/app/components2/services/advertising.ser
 
 })
 export class AdvertisingDetailsComponent implements OnInit {
+  title = 'Location';
+  lat = 23.746466;
+  lng = 90.376015;
+
   contact: Contact = new Contact();
   singleAdvertising: any;
   getMenuId: any;

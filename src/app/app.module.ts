@@ -24,7 +24,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AdvertiseComponent } from './components2/advertise/advertise.component';
 import { MyAdvertisementComponent } from './components2/my-advertisement/my-advertisement.component';
 import { AdvertisingDetailsComponent } from './components/advertising-details/advertising-details.component';
-
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -47,6 +47,9 @@ import { AdvertisingDetailsComponent } from './components/advertising-details/ad
     
   ],
   imports: [
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAT_nNPS5DGH45ih7BUjE9U4Gilx2R7rLQ'
+    }),
   
     BrowserModule,
     AppRoutingModule,
@@ -55,8 +58,8 @@ import { AdvertisingDetailsComponent } from './components/advertising-details/ad
     FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
-  
+    ToastrModule.forRoot(),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

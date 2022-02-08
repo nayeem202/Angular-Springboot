@@ -94,15 +94,23 @@
                     <h3>My Google Maps Demo</h3>
                     <!--The div element for the map -->
                     <div id="map"></div>
-                
+
                     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
                     <script
-                      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAD524KkygqiaZBTg3LE_8xlHXYSxgPwss&callback=initMap&libraries=&v=weekly"
-                      async
-                    ></script>
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAD524KkygqiaZBTg3LE_8xlHXYSxgPwss&callback=initMap&libraries=&v=weekly"
+                        async></script>
 
                 </div>
 
+                <div>
+                    <h1>{{ title }}</h1>
+
+                    <!-- this creates a google map on the page with the given lat/lng from -->
+                    <!-- the component as the initial center of the map: -->
+                    <agm-map [latitude]="lat" [longitude]="lng">
+                        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                    </agm-map>
+                </div>
 
 
                 <!-- <div class="property-direction pull-left">

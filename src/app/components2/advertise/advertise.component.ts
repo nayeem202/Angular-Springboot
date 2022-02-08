@@ -12,6 +12,9 @@ import { Advertise } from './advertiseModel';
   styleUrls: ['./advertise.component.css']
 })
 export class AdvertiseComponent implements OnInit {
+
+
+
   user: User = new User();
   submitted = false;
   advertise: Advertise = new Advertise();

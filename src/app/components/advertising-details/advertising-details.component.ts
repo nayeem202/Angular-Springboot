@@ -13,9 +13,7 @@ import { AdvertisingService } from 'src/app/components2/services/advertising.ser
 
 })
 export class AdvertisingDetailsComponent implements OnInit {
-  title = 'Location';
-  lat = 23.746466;
-  lng = 90.376015;
+  
 
   contact: Contact = new Contact();
   singleAdvertising: any;
@@ -32,6 +30,10 @@ export class AdvertisingDetailsComponent implements OnInit {
   bedrooms = "Bedrooms"
   bathrooms = "Bathrooms";
 
+  title = 'Location';
+  lat : number = 23.847815;
+  lng : number = 90.368778;
+
   
 
   constructor(private route: Router, private advertisigService: AdvertisingService, private param: ActivatedRoute, private http: HttpClient, private toastr: ToastrService) {
@@ -43,6 +45,11 @@ export class AdvertisingDetailsComponent implements OnInit {
     this.advertisigService.getAdvertisingById(this.getMenuId).subscribe(res => {
       console.log(res);
       this.singleAdvertising = res
+      this.lat = this.singleAdvertising.lat;
+      this.lng = this.singleAdvertising.lng;
+      console.log(this.lat);
+      console.log(this.lng);
+      
     },
       err => {
         console.log(err);

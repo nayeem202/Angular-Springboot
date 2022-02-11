@@ -100,6 +100,8 @@ export class AdvertiseComponent implements OnInit {
     formData.append('bathrooms', this.advertise['bathrooms'].toString());
     formData.append('price', this.advertise['price'].toString());
     formData.append('sqft', this.advertise['sqft'].toString());
+    formData.append('lat', this.advertise['lat'].toString());
+    formData.append('lng', this.advertise['lng'].toString());
     formData.append('additionalinformation', this.advertise['additionalinformation']);
     formData.append('user_id', this.userM['id'].toString());
     formData.append('files', this.fileToUpload1, this.fileToUpload1?.name);

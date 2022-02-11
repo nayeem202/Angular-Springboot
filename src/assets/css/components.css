@@ -105,7 +105,7 @@
     -o-animation: loading 2s 1s infinite;
     animation: loading 2s 1s infinite;
 }
-@keyframes "loading" {
+/* @keyframes "loading" {
     from {
         left: 0;
     }
@@ -144,7 +144,7 @@
     to {
         left: 100%;
     }
-}
+} */
 
 /* ## widget ## */
 .footer .widget-title {
@@ -463,7 +463,7 @@
     z-index: 90;
     font-size: 18px;
     font-family: 'icomoon';
-    speak: none;
+    /* speak: none; */
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -484,7 +484,7 @@
     -webkit-transition: width 0.8s;
     -moz-transition: width 0.8s;
     transition: width 0.8s;
-    -webkit-backface-visibility: hidden;
+    /* -webkit-backface-visibility: hidden; */
 }
 
 .sb-search.sb-search-open .sb-icon-search,
@@ -508,7 +508,7 @@
     -webkit-transition: width 0.3s;
     -moz-transition: width 0.3s;
     transition: width 0.3s;
-    -webkit-backface-visibility: hidden;
+    /* -webkit-backface-visibility: hidden; */
 }
 
 .sb-search {
@@ -520,7 +520,7 @@
     -webkit-transition: width 0.1s;
     -moz-transition: width 0.1s;
     transition: width 0.1s;
-    -webkit-backface-visibility: hidden;
+    /* -webkit-backface-visibility: hidden; */
     top: 0;
 	float: left;
 }
@@ -542,5 +542,5 @@
     -webkit-transition: width 0.3s;
     -moz-transition: width 0.3s;
     transition: width 0.3s;
-    -webkit-backface-visibility: hidden;
+    /* -webkit-backface-visibility: hidden; */
 }

@@ -1,7 +1,9 @@
 export class Advertise {
   
 
-   
+    lat : number = 0.0;
+    lng : number = 0.0;
+    
     advertisingId : number = 0;
     location: string = "";
     type: string = "";

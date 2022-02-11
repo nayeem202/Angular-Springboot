@@ -89,21 +89,10 @@
                 </div>
 
 
-                <div class="property-header">
-
-                    <h3>My Google Maps Demo</h3>
-                    <!--The div element for the map -->
-                    <div id="map"></div>
-
-                    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-                    <script
-                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAD524KkygqiaZBTg3LE_8xlHXYSxgPwss&callback=initMap&libraries=&v=weekly"
-                        async></script>
-
-                </div>
+              
 
                 <div>
-                    <h1>{{ title }}</h1>
+                    <h3>{{ title }}</h3>
 
                     <!-- this creates a google map on the page with the given lat/lng from -->
                     <!-- the component as the initial center of the map: -->
@@ -112,14 +101,7 @@
                     </agm-map>
                 </div>
 
-
-                <!-- <div class="property-direction pull-left">
-                <h3>Get Direction</h3>
-                <div class="property-map">
-                    <div id="gmap" class="mapping"></div>
-                </div>
-            </div> -->
-
+               
                 <div class="property-map contact-agent">
                     <h3>Contact: House Owner</h3>
                     <div class="col-md-4 agent-details">
@@ -163,6 +145,7 @@
 
             </div><!-- col-md-9 /- -->
             <!-- col-md-3 -->
+            
             <div class="col-md-3 col-sm-6 p_r_z property-sidebar">
                 <aside class="widget widget-search">
                     <h2 class="widget-title">search<span>Your Dream Home </span></h2>
@@ -194,7 +177,7 @@
                         <option value="Family(3+ Members)">Family(3+ Members)</option>
 
                     </select>
-                    <div class="col-md-6 col-sm-6 p_l_z">
+                    <div class="col-md-10 col-sm-6 p_l_z">
                         <select [(ngModel)]="bedrooms">
                             <option selected disabled>Bedrooms</option>
                             <option value="0">0</option>
@@ -209,7 +192,7 @@
 
                         </select>
                     </div>
-                    <div class="col-md-6 col-sm-6 p_r_z">
+                    <div class="col-md-10 col-sm-6 p_r_z">
                         <select [(ngModel)]="bathrooms">
                             <option selected disabled>Bathrooms</option>
                             <option value="0">0</option>
